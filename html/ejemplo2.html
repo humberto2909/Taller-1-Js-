@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fases memorables de Deadpool</title>
+    <script src="../js/utilidades.js"></script>
+</head>
+<body>
+    <script>
+
+        tituloFrases = crearNodoConTexto("h1", "Frases memorables de Deadpool")
+        introduccionFrases = crearNodoConTexto("p", "Deadpool es conocido por su ingenio rápido y su sentido del humor único. Aquí hay algunas de sus frases más memorables.")
+        tituloCitas = crearNodoConTexto("h2", "Citas Famosas")
+        notaFrases = crearNodoConTexto("p", "Nota: Cada una de estas frases captura perfectamente el espíritu sarcástico y subversivo de Deadpool.")
+        tituloVideo = crearNodoConTexto("h2", "Video de las Mejores Escenas")
+        videoDeadpool = crearVideo("../recursos/videos/videoDeadpool.mp4")
+
+        listaFrases = crearNodo("ul")
+        frase1 = crearNodoConTexto("li", "Maximum effort!")
+        frase2 = crearNodoConTexto("li", "I'm about to do to you what Limp Bizkit did to music in the late 90s.")
+        frase3 = crearNodoConTexto("li", "You're probably thinking, 'This was a superhero movie but that guy in the suit just turned that other guy into a kebab!'")
+
+        adicionarNodoAContenedor(frase1, listaFrases)
+        adicionarNodoAContenedor(frase2, listaFrases)
+        adicionarNodoAContenedor(frase3, listaFrases)
+
+        adicionarNodoABody(tituloFrases)
+        adicionarNodoABody(introduccionFrases)
+        adicionarNodoABody(tituloCitas)
+        adicionarNodoABody(listaFrases)
+        adicionarNodoABody(notaFrases)
+        adicionarNodoABody(tituloVideo)
+        adicionarNodoABody(videoDeadpool)
+
+    </script>
+</body>
+</html>

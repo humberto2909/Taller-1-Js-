@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu principal</title>
+    <script src="js/utilidades.js"></script>
+</head>
+<body>
+    <script>
+
+        tituloPrincipal = crearNodoConTexto("h1", "Bienvenido al sitio de Deadpool")
+        introduccionTexto = crearNodoConTexto("p", "Explora las siguientes páginas para conocer más sobre Deadpool y sus frases memorables")
+        seccionMenu = crearNodoConTexto("h2", "Menú de navegación")
+
+        listaNavegacion = crearNodo("ul")
+        lista1 = crearNodo("li")
+        lista2 = crearNodo("li")
+        enlacePersonajes = enlace("Personajes Principales", "html/ejemplo1.html", "_blank")
+        enlaceFrases = enlace("Frases Memorables", "html/ejemplo2.html", "_blank")
+
+        adicionarNodoAContenedor(enlacePersonajes, lista1)
+        adicionarNodoAContenedor(enlaceFrases, lista2)
+        adicionarNodoAContenedor(lista1, listaNavegacion)
+        adicionarNodoAContenedor(lista2, listaNavegacion)
+
+        seccionDescripcion = crearNodoConTexto("h2", "¿Quién es Deadpool?")
+
+        descripcionParrafo = crearNodo("p")
+        textoDescripcion1 = document.createTextNode("Deadpool, también conocido como ")
+        textoDescripcion2 = document.createTextNode(", es un anti-héroe de marvel conocido por su humor sarcástico y sus habilidades de combate.")
+        personajeNombre = crearNodoConTexto("strong", "Wade Wilson")
+        descripcionParrafo.appendChild(textoDescripcion1)
+        descripcionParrafo.appendChild(personajeNombre)
+        descripcionParrafo.appendChild(textoDescripcion2)
+
+        imagenDeadpool = crearImagen("../recursos/imagenes/DeadpoolYWolverine.jpg", "wade wilson", "200px", "100px")
+
+        adicionarNodoABody(tituloPrincipal)
+        adicionarNodoABody(introduccionTexto)
+        adicionarNodoABody(seccionMenu)
+        adicionarNodoABody(listaNavegacion)
+        adicionarNodoABody(seccionDescripcion)
+        adicionarNodoABody(descripcionParrafo)
+        adicionarNodoABody(imagenDeadpool)
+
+    </script>
+</body>
+</html>
